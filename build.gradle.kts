@@ -8,5 +8,13 @@ repositories {
 
 kotlin {
     jvm()
-    
+    iosSimulatorArm64()
+
+    sourceSets {
+        getByName("commonTest") {
+            dependencies {
+                implementation("org.jetbrains.kotlin:kotlin-test")
+            }
+        }
+    }
 }
